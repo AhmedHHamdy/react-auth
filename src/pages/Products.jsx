@@ -9,15 +9,7 @@ export default function Products() {
   const [loadingStatus, setLoadingStatus] = useState(true)
   const [error, setError] = useState(null)
 
-
-
   const { token } = useAuth()
-
-  // I used this token to get the dummy data because using the user's token will result in an empty dummy data, but the implementation stays the same
-  // If you want to test the use's data, just uncomment the const {token} but you will recive no data
-  // let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDY1OThlOTUyOGY4OGYwYjJiZTRmNmY4NDJkNjc5YjE3YTg3OGMyY2NhYzFmNGMzYzQ1NDgzNjc3YWM4MTlmNmI2NTRjZWQyNThkNzEwMzQiLCJpYXQiOjE2OTk0ODkyNzEuMDc1MDg1LCJuYmYiOjE2OTk0ODkyNzEuMDc1MDg4LCJleHAiOjE3MzExMTE2NzEuMDQ5MzQ5LCJzdWIiOiIzNSIsInNjb3BlcyI6W119.odR5sQ-3dRjWIjBIMTBIkGHZ170bZwz6pD7CsU7LyuyrsIv9wXEw-7gnrVt03MY4VgPZjIJ4aenv_ENyy_RH3D41O92SwnEC4yL6bwcbu3jCOKFfQKV3OcuDpoc_A6I6imTbrHMrgBMG9asVzo20UwSTh8Vz28zGUj8PkMC_KMRjXEypUvdCqfbjTNEH0125GigKjHs27BGNtqz6Z_ULkaDFMO88ajnMjI-CE8LMCJTJSYRyQk-8vFvrJJstS0rm_hhME8kOnAIwrvzV-NsMyzVMTpRvnkgsF-KgVHGkIv_IIrvggLsV8Ggo1c3WE7LgKZC9Bief-6abmyRA-huuliSs5bGqLF5G4V0rck0WUbeo9z2TaxzkDWOhsSvTn268Yw7aDCGmkkHiVtJJTuhguqVyKO7DDhtvlmlDV0TRLK9wBeCEsJbNzaEbu-Wrzuo9wFWOt321gVkDasocv-SjTY69dutl0g0TSPRIIPQEIwLLhlw5j0FBK2BAHHe1bAG7Yb7Bx7ZNEaOJ4iSj0W8dZ2sfbUI98hX9bSNlMzh2amZq5EfsMhvYmn0Th-2VkZ9p-GF5Uu1UWgpZ3CeVWSwr8oajRyzis6nGq7Tgw0KpYcWVsaZs6ODn-RsZM9sDyDjc0VzrhKETusk62CHLIbGqo9Zt4ua3fZKF59Q7irYbDLA"
-
-
 
   useEffect(() => {
     async function getDummyData() {

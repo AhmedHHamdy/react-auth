@@ -9,7 +9,11 @@ export default function AuthProvider({ children }) {
   const [token, setToken_] = useState(Cookies.get("token")); 
 
   const setToken = (newToken) => {
+    console.log(newToken)
     setToken_(newToken);
+    if (newToken === undefined) {
+      return;
+    }
     Cookies.set("token", newToken); 
   };
 

@@ -1,9 +1,10 @@
 import "../App.css"
-import { Link, NavLink, Navigate } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 import { TbWorld } from "react-icons/tb"
 import { useAuth } from "../context/AuthProvider"
 import { MdKeyboardArrowDown } from "react-icons/md"
 import { AiOutlineMenu } from "react-icons/ai"
+import Cookies from "js-cookie"
 
 export default function Header() {
   const activeStyle = {
@@ -14,7 +15,10 @@ export default function Header() {
 
   const { token, setToken } = useAuth()
 
+  const navigate = useNavigate()
+
   function handleLogout() {
+    Cookies.remove("token")
     setToken()
     navigate("/", { replace: true })
   }

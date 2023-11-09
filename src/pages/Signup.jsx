@@ -53,7 +53,7 @@ export default function Signup() {
         try {
     
           if (!validPassword) {
-            setErrMsg('Password does not meet the requirements')
+            setErrMsg('Password must contain at least one lowercase letter, one uppercase letter, one digit, and be between 8 and 24 characters in length.')
             return
           }
     
@@ -95,7 +95,7 @@ export default function Signup() {
                 </h1>
                 <p className="text-red-600" aria-live="assertive">{errMsg}</p>
 
-                <form className="space-y-4 md:space-y-6 grid grid-cols-1 md:grid-cols-2 gap-4" onSubmit={handleSubmit}>
+                <form className=" md:space-y-6 grid grid-cols-1 md:grid-cols-2 gap-4 mt-0" onSubmit={handleSubmit}>
                     <div className="self-end">
                         <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
                         <input
