@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  overflow-x: hidden;
+}
+
+@keyframes rotate {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes planetAnimationOne {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes planetAnimationTwo {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes rocketAnimation {
+  0% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(-8%);
+  }
+  100% {
+    transform: translateY(10%);
+  }
+}
+
+.animate-planet-one {
+  animation: planetAnimationOne 16s linear infinite;
+}
+
+.animate-planet-two {
+  animation: planetAnimationTwo 16s linear infinite;
+}
+
+
+.animate-rocket {
+  animation: rocketAnimation 16s linear infinite;
+}
+
